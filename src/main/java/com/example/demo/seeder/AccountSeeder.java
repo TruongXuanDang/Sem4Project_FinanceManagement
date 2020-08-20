@@ -24,8 +24,7 @@ public class AccountSeeder implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        if(accountRepo.count() != 0L) return;
-        RegisterModel model = new RegisterModel();
+
         //accountService.create(model)
     }
 }
