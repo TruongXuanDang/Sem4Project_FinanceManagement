@@ -9,19 +9,25 @@
 
         <th:block th:replace="admin/header :: header-css"></th:block>
     </head>
-    <body class="hold-transition sidebar-mini layout-fixed">
+    <body>
+
         <div class="wrapper">
+            <div th:replace="admin/header :: header-nav" class="sidebar" data-color="purple" data-background-color="white" th:src="@{/img/sidebar-1.jpg}"></div>
+            <div class="main-panel ps-container ps-theme-default ps-active-y" data-ps-id="57c464fe-4771-d530-5440-4b27ac2ae33c">
+                <!-- Navbar -->
+                <div th:replace="admin/header :: header-aside"></div>
+                <!-- End Navbar -->
+                <div class="content">
+                    <div class="container-fluid">
+                        <div layout:fragment="content"></div>
+                    </div>
+                </div>
+                <footer class="footer">
+                    <div th:replace="admin/footer :: footer"></div>
+                </footer>
+                <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;"><div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; right: 0px; height: 937px;"><div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 709px;"></div></div></div>
 
-            <!-- Navbar -->
-            <div th:replace="admin/header :: header-nav"></div>
-            <!-- Main Sidebar Container -->
-            <div th:replace="admin/header :: header-aside"></div>
-
-
-                <div layout:fragment="content"></div>
-            </div>
-            <!-- /.content-wrapper -->
         </div>
-        <div th:replace="admin/footer :: footer"></div>
+
     </body>
 </html>
